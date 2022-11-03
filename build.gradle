@@ -1,0 +1,30 @@
+/* Plugins */
+plugins {
+    id 'com.github.ben-manes.versions' version '0.43.0'
+    id 'idea'
+    id 'java-library'
+}
+
+/* Group, Version */
+group = 'at.jku.dke'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = 11
+
+/* Repositories */
+repositories { 
+    mavenCentral() 
+}
+
+/* Dependencies */
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.4'
+    
+    testImplementation 'com.openpojo:openpojo:0.9.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+}
+
+/* Tests */
+test {
+    useJUnitPlatform()
+}
